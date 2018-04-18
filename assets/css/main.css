@@ -3,6 +3,7 @@ html,body{
     margin: 0;
     padding: 0;
     border: 0;
+    height: 100%;
     box-sizing: border-box;
     color: #333;
     font-family:-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif; ;
@@ -17,6 +18,8 @@ input,input:hover,input:active,input:focus{
 }
 h1,h2,h3,h4,h5,h6{
     font-size: 17px!important;
+    margin: 0;
+
 }
 a{
     text-decoration: none;
