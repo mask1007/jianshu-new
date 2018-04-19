@@ -27,7 +27,7 @@
                         <input type="text" placeholder="手机号或邮箱">
                         <i class="fa fa-user"></i>
                     </div>
-                    <div class="input-prepend">
+                    <div class="input-prepend" id="last">
                         <input type="text" placeholder="密码">
                         <i class="fa fa-lock"></i>
                     </div>
@@ -35,9 +35,11 @@
                         <input type="checkbox">
                         <span>记住我</span>
                     </div>
+                    <div class="help">
+                        <nuxt-link class="help" to="/">登录遇到问题</nuxt-link>
+                    </div>
 
-                    <nuxt-link class="help" to="/">登录遇到问题</nuxt-link>
-                    <button >登录</button>
+                    <button class="sign-in-btn">登录</button>
                 </form>
             </div>
             <!--第三方的登录-->
