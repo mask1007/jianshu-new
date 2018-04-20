@@ -83,8 +83,8 @@
             title: '注册-简书',
             meta: [
                 {charset: 'utf-8'},
-                {name: 'keywords', content: '登录页面'},
-                {name: 'description', content: '登录简书'},
+                {name: 'keywords', content: '注册页面'},
+                {name: 'description', content: '注册简书'},
                 {name: 'author', content: '孔露萍'}
             ]
         },

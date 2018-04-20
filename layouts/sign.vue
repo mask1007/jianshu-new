@@ -195,7 +195,7 @@
         top: 10px;
     }
     .sign .main .more-sign ul{
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
     .sign .main .more-sign ul li{
         display: inline-block;
