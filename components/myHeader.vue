@@ -71,7 +71,8 @@
                         <!--</li>-->
 
                         <li>
-                            <nuxt-link class="active" to="/">
+                            <nuxt-link class="active"
+                                       to="/">
                                 <i class="fa fa-compass"> </i>
                                 <span>发现</span>
 
@@ -203,7 +204,7 @@
                 this.count++;
                 var count=this.count;
                 var el=document.querySelector(".navbar-content");
-                el.style.transition='0.1s';
+                el.style.transition='0.5s';
                 if(count%2==1){
                     el.style.height='224px';
                 }else {
@@ -529,6 +530,7 @@
         line-height: 20px;
     }
 
+
     nav .navbar-content .search form .search-btn {
         position: absolute;
         width: 25px;
@@ -597,6 +599,7 @@
         }
         nav .navbar-content{
             overflow: hidden;
+            position: absolute;
         }
 
     }
