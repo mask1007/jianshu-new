@@ -62,110 +62,112 @@
                 <!--右上角，登录注册-->
                 <!--导航部分-->
                 <div class="container">
-                    <!--<button class="navbar-toggle">-->
-                    <!--<i class="navbar-icon fa fa-bars"></i>-->
-                    <!--</button>-->
-                    <ul class="nav-list">
-                        <!--<li class="navbar-btn" @click="menutextShow">-->
-                        <!--<i class="fa fa-bars"></i>-->
-                        <!--</li>-->
+                   <div class="row">
+                       <!--<button class="navbar-toggle">-->
+                       <!--<i class="navbar-icon fa fa-bars"></i>-->
+                       <!--</button>-->
+                       <ul class="nav-list">
+                           <!--<li class="navbar-btn" @click="menutextShow">-->
+                           <!--<i class="fa fa-bars"></i>-->
+                           <!--</li>-->
 
-                        <li>
-                            <nuxt-link class="active" to="/">
-                                <i class="fa fa-compass"> </i>
-                                <span>发现</span>
+                           <li>
+                               <nuxt-link class="active" to="/">
+                                   <i class="fa fa-compass"> </i>
+                                   <span>发现</span>
 
-                            </nuxt-link>
-                        </li>
+                               </nuxt-link>
+                           </li>
 
-                        <li>
-                            <nuxt-link to="/follow">
-                                <i class="fa fa-book"> </i>
-                                <span>关注</span>
-                            </nuxt-link>
-                        </li>
+                           <li>
+                               <nuxt-link to="/follow">
+                                   <i class="fa fa-book"> </i>
+                                   <span>关注</span>
+                               </nuxt-link>
+                           </li>
 
-                        <li class="user" @mouseenter="notifyShowenter" @mouseleave="notifyShowleave">
-                            <nuxt-link to="/notify">
-                                <i class="fa fa-bell-o"> </i>
-                                <span>消息</span>
-                            </nuxt-link>
-                            <!--//消息里面的下拉框-->
-                            <ul class="drop-menu" v-show="notifyShow">
+                           <li class="user" @mouseenter="notifyShowenter" @mouseleave="notifyShowleave">
+                               <nuxt-link to="/notify">
+                                   <i class="fa fa-bell-o"> </i>
+                                   <span>消息</span>
+                               </nuxt-link>
+                               <!--//消息里面的下拉框-->
+                               <ul class="drop-menu" v-show="notifyShow">
 
-                                <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-comment-o"></i>
-                                        评论
-                                    </nuxt-link>
-                                </li>
+                                   <li>
+                                       <nuxt-link to="/">
+                                           <i class="fa fa-comment-o"></i>
+                                           评论
+                                       </nuxt-link>
+                                   </li>
 
-                                <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-envelope-o"></i>
-                                        简信
-                                    </nuxt-link>
-                                </li>
+                                   <li>
+                                       <nuxt-link to="/">
+                                           <i class="fa fa-envelope-o"></i>
+                                           简信
+                                       </nuxt-link>
+                                   </li>
 
-                                <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-plus-square-o"></i>
-                                        关注
-                                    </nuxt-link>
-                                </li>
+                                   <li>
+                                       <nuxt-link to="/">
+                                           <i class="fa fa-plus-square-o"></i>
+                                           关注
+                                       </nuxt-link>
+                                   </li>
 
-                                <li>
-                                    <nuxt-link to="/">
-                                        <i class="fa fa-heart-o"></i>
-                                        喜欢和赞
-                                    </nuxt-link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="search">
-                            <form method="post">
-                                <input type="text" placeholder="搜索" class="search-input">
-                                <a href="#" class="search-btn">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
+                                   <li>
+                                       <nuxt-link to="/">
+                                           <i class="fa fa-heart-o"></i>
+                                           喜欢和赞
+                                       </nuxt-link>
+                                   </li>
+                               </ul>
+                           </li>
+                           <li class="search">
+                               <form method="post">
+                                   <input type="text" placeholder="搜索" class="search-input">
+                                   <a href="#" class="search-btn">
+                                       <i class="fa fa-search"></i>
+                                   </a>
+                               </form>
+                           </li>
 
-                        <!---->
-                        <!---->
-                        <!---->
-                        <!---->
-                        <li class="navbar-btn" @click="navbarBtnShow">
-                            <i class="fa fa-bars"></i>
-                        </li>
-                    </ul>
-                    <transition name="fade">
-                        <ul class="navbar-content">
-                            <li>
-                                <nuxt-link to="/" class="active">
-                                    发现
-                                </nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/">
-                                    关注
-                                </nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="/">
-                                    消息
-                                </nuxt-link>
-                            </li>
-                            <li class="search">
-                                <form action="" method="post">
-                                    <input type="text" placeholder="搜索" class="search-input">
-                                    <a href="#" class="search-btn">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </form>
-                            </li>
-                        </ul>
-                    </transition>
+                           <!---->
+                           <!---->
+                           <!---->
+                           <!---->
+                           <li class="navbar-btn" @click="navbarBtnShow">
+                               <i class="fa fa-bars"></i>
+                           </li>
+                       </ul>
+                       <transition name="fade">
+                           <ul class="navbar-content">
+                               <li>
+                                   <nuxt-link to="/" class="active">
+                                       发现
+                                   </nuxt-link>
+                               </li>
+                               <li>
+                                   <nuxt-link to="/">
+                                       关注
+                                   </nuxt-link>
+                               </li>
+                               <li>
+                                   <nuxt-link to="/">
+                                       消息
+                                   </nuxt-link>
+                               </li>
+                               <li class="search">
+                                   <form action="" method="post">
+                                       <input type="text" placeholder="搜索" class="search-input">
+                                       <a href="#" class="search-btn">
+                                           <i class="fa fa-search"></i>
+                                       </a>
+                                   </form>
+                               </li>
+                           </ul>
+                       </transition>
+                   </div>
                 </div>
             </div>
         </nav>
@@ -324,6 +326,7 @@
         margin: 0;
         padding: 10px 0;
         font-size: 15px;
+        background-color: white;
     }
 
     nav .user .drop-menu li a {
