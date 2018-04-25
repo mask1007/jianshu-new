@@ -76,21 +76,21 @@
                         <div class="like-btn">
                             <a href="#" class="">喜欢</a>
                         </div>
-                        <div class="modal-num">
+                        <div class="like-num">
                             <a href="#">50</a>
                         </div>
                     </div>
                     <div class="share">
                         <a href="#" class="share-btn">
-                            <i class="fa fa-weixin"></i>
+                            <i class="fa fa-weixin weixin"></i>
                         </a>
                         <a href="#" class="share-btn">
-                            <i class="fa fa-weibo"></i>
+                            <i class="fa fa-weibo weibo"></i>
                         </a>
                         <a href="#" class="share-btn">
-                            <i class="fa fa-photo"></i>
+                            <i class="fa fa-qq qq"></i>
                         </a>
-                        <a href="#" class="more-share">
+                        <a href="#" class="more-share share-btn">
                            更多分享
                         </a>
                     </div>
