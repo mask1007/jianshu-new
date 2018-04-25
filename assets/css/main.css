@@ -53,6 +53,13 @@ a:hover{
     text-decoration: none;
     color: #333;
 }
+a:active{
+    text-decoration: none;
+    color: #333;
+}
+p{
+    margin: 0;
+}
 /*************************************首页样式**********************************/
 .container{
     padding-left: 15px;

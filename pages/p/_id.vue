@@ -72,6 +72,7 @@
                 </div>
                 <!--文章底部的喜欢和分享-->
                 <div class="meta-bottom">
+                    <!--喜欢-->
                     <div class="like">
                         <div class="like-btn">
                             <a href="#" class="">喜欢</a>
@@ -80,6 +81,7 @@
                             <a href="#">50</a>
                         </div>
                     </div>
+                    <!--分享-->
                     <div class="share">
                         <a href="#" class="share-btn">
                             <i class="fa fa-weixin weixin"></i>
@@ -94,7 +96,10 @@
                            更多分享
                         </a>
                     </div>
+
                 </div>
+                <!--留言组件-->
+                <my-comment></my-comment>
 
             </div>
 
@@ -106,6 +111,7 @@
 </template>
 
 <script>
+    import  myComment from '~/components/myComment'
     import  myHeader from '~/components/myHeader'
     export default {
         head:{
@@ -123,6 +129,7 @@
         },
         components:{
             myHeader,
+            myComment,
         }
     }
 </script>
