@@ -154,7 +154,6 @@
 
                             </li>
                             <li>
-
                                 <div class="content">
                                     <div class="author">
                                         <nuxt-link to="/p/123" class="avatar">
@@ -187,12 +186,132 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="#" class="load-more">阅读更多</a>
+
                     </div>
+                    <a href="#" class="load-more">阅读更多</a>
                 </div>
                 <!--占7份，偏移了1份-->
                 <div class="col-xs-offset-1 col-xs-7 aside">
-                    侧边栏
+                    <div class="row">
+                        <!--广告-->
+                        <div class="board">
+                            <nuxt-link to="/">
+                                <img src="~assets/img/ad1.png">
+                            </nuxt-link>
+                            <nuxt-link to="/">
+                                <img src="~assets/img/ad2.png">
+                            </nuxt-link>
+                            <nuxt-link to="/">
+                                <img src="~assets/img/ad3.png">
+                            </nuxt-link>
+                            <nuxt-link to="/">
+                                <img src="~assets/img/ad4.png">
+                            </nuxt-link>
+                        </div>
+                        <!--推荐作者-->
+                        <div class="recommended-author">
+                            <div class="title">
+                                <span>推荐作者</span>
+                                <span @click="rotatefa++">
+                                     <nuxt-link to="/" class="page-change">
+                                    <!--<i :class="[rotate?'fa fa-refresh go':'fa fa-refresh qq']"   ></i>-->
+                                         <i class="fa fa-refresh"
+                                            :style="{transform:'rotate('+360*rotatefa+'deg)'}"></i>
+                                    换一批
+                                </nuxt-link>
+                                </span>
+
+
+                            </div>
+                            <ul class="recommended-list">
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow" @click="followed">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow"  @click="followed">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+                                <li>
+                                    <nuxt-link class="avatar" to="/u/123">
+                                        <img src="~assets/img/default-avatar.jpg">
+                                    </nuxt-link>
+                                    <a href="#" class="follow">
+                                        <i class="fa fa-plus"></i>
+                                        关注
+                                    </a>
+                                    <nuxt-link to="/u/123" class="name">
+                                        简书用户
+                                    </nuxt-link>
+                                    <p>写了198.7K字·1.7K喜欢</p>
+                                </li>
+
+
+                            </ul>
+                            <nuxt-link to="/" class="find-more">
+                                查看更多
+                                <i class="fa fa-angle-right"></i>
+                            </nuxt-link>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -220,10 +339,56 @@
         },
         data() {
             return {
-                name: '首页'
+                // rotate:false,
+                rotatefa: 0,
+                count: 0,
+                style:
+                    [
+                        {icon: 'fa fa-plus', word: '关注', color: '#42c02e'},
+                        {icon: 'fa fa-check', word: '已关注', color: '#969696'},
+                        {icon: 'fa fa-remove', word: '取消关注', color: '#969696'},
+
+                    ]
+
             }
+        },
+        methods: {
+            // rotatefa() {
+            //     // console.log('ssss');
+            //     // var a = document.querySelector('.index .aside .recommended-author .title .page-change i ');
+            //     // console.log(a)
+            //     // current = (current + 90) % 360;
+            //     // a.style.transform = 'rotate(' + current + 'deg)';
+            //     // a.style.transition = 'all 1s';
+            //     // this.rotate=!this.rotate;
+            //
+            //
+            // },
+            followed() {
+                // this.count++;
+                // var count=this.count;
+                // console.log(count);
+                // var a=document.querySelector('.index .aside .recommended-author .recommended-list li .follow')
+                // console.log(a)
+                // if(count%2==0){
+                //     a.innerHTML='<i class="fa fa-plus"></i> 关注';
+                //     a.style.color='#42c02e'
+                // }
+                // if(count%2==1){
+                //     a.innerHTML='<i class="fa fa-check"></i> 已关注';
+                //     a.style.color='#969696';
+
+                }
+
+
+            },
+            // in(){
+            //     if(count%2==1){
+            //
+            //     }
+            // }
         }
-    }
+
 </script>
 <style>
 

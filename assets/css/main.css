@@ -67,12 +67,7 @@ a:hover{
     visibility: hidden;
     clear: both;
 }
-/*大于768px*/
-@media (min-width: 768px) {
-    .container {
-        width:750px
-    }
-}
+
 /*大于992px*/
 @media (min-width: 992px) {
     .container {
