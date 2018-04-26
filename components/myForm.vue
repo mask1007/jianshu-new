@@ -45,10 +45,11 @@
         width: 38px;
         height: 38px;
         position: absolute;
-        left: -38px;
+        left: -48px;
         display: inline-block;
         margin-right: 10px;
     }
+
     .comment-list .new-comment textarea{
         padding: 10px 15px;
         width: 100%;
