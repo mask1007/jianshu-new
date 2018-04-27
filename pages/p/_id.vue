@@ -96,18 +96,48 @@
                     </div>
                     <!--分享-->
                     <div class="share">
-                        <a href="#" class="share-btn" v-tooltip="tooltipContent">
+                        <a href="#" class="share-btn" v-tooltip="'分享到微信'">
                             <i class="fa fa-weixin weixin"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="#" class="share-btn"  v-tooltip="'分享到微博'">
                             <i class="fa fa-weibo weibo"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="#" class="share-btn"  v-tooltip="'分享到qq'">
                             <i class="fa fa-qq qq"></i>
                         </a>
-                        <a href="#" class="more-share share-btn">
-                            更多分享
+
+                        <a class="more-share share-btn">
+                            <v-popover offset="8">
+                           <span>更多分享</span>
+                            <template slot="popover">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-star fa-fw" style="color:#eebf13"></i>
+                                        分享到QQ空间
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-twitter fa-fw" style="color:#00aaec"></i>
+                                        分享到Twitter
+                                </li>
+                                    <li>
+                                        <i class="fa fa-facebook-official fa-fw" style="color:#4460a0"></i>
+                                        分享到Facebook
+                                </li>
+                                    <li>
+                                        <i class="fa fa-google-plus fa-fw" style="color:#f9402e"></i>
+                                        分享到Google+
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-github fa-fw" style="color:#3f902d"></i>
+                                        分享到豆瓣
+                                    </li>
+
+                                </ul>
+
+                            </template>
+                            </v-popover>
                         </a>
+
                     </div>
 
                 </div>
@@ -126,10 +156,7 @@
 <script>
     import myComment from '~/components/myComment'
     import myHeader from '~/components/myHeader'
-    // import Vue from 'vue'
-    // import VTooltip from 'v-tooltip'
-    //
-    // Vue.use(VTooltip)
+
 
     export default {
         head: {

@@ -6,9 +6,13 @@
             <textarea name="comment-content" placeholder="写下你的评论"></textarea>
             <div class="write-function-block">
                 <div class="emoji-modal-wrap">
-                    <a href="#" class="emoji">
-                        <i class="fa fa-smile-o"></i>
+                    <a class="emoji">
+                        <i class="fa fa-smile-o" @click="shows=!shows"></i>
+
                     </a>
+                    <div class="emoji-show" v-show="shows">
+                    <emoji></emoji>
+                    </div>
                     <div class="emoji-modal"></div>
                 </div>
                 <div class="hint">Ctrl+Enter发表</div>
@@ -21,11 +25,13 @@
 </template>
 
 <script>
+    import Emoji from "./emoji";
     export default {
         name: "myForm",
-        date(){
+        components: {Emoji},
+        data(){
             return{
-
+             shows:false
             }
         }
     }
@@ -104,5 +110,11 @@
         margin: 18px 30px 0 0;
         font-size: 16px;
         color: #969696;
+    }
+    .emoji-show{
+        position: absolute;
+        left: -55px;
+        top: 100px;
+        z-index: 9999;
     }
 </style>
