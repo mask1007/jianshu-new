@@ -95,28 +95,28 @@
                                <ul class="drop-menu" v-show="notifyShow">
 
                                    <li>
-                                       <nuxt-link to="/">
+                                       <nuxt-link to="/notifications/comments">
                                            <i class="fa fa-comment-o"></i>
                                            评论
                                        </nuxt-link>
                                    </li>
 
                                    <li>
-                                       <nuxt-link to="/">
+                                       <nuxt-link to="/notifications/chats">
                                            <i class="fa fa-envelope-o"></i>
                                            简信
                                        </nuxt-link>
                                    </li>
 
                                    <li>
-                                       <nuxt-link to="/">
+                                       <nuxt-link to="/notifications/follows">
                                            <i class="fa fa-plus-square-o"></i>
                                            关注
                                        </nuxt-link>
                                    </li>
 
                                    <li>
-                                       <nuxt-link to="/">
+                                       <nuxt-link to="/notifications/likes">
                                            <i class="fa fa-heart-o"></i>
                                            喜欢和赞
                                        </nuxt-link>
